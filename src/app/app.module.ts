@@ -26,6 +26,7 @@ import { ProfissionaisComponent } from './profissionais/profissionais.component'
     {path: 'login', component: LoginComponent},
     {path: 'principal', component: PrincipalComponent},
     {path: 'cadastro', component: CadastroComponent},
+    {path: 'publicacao', component: PublicacaoComponent},
     ]),
   ],
   providers: [],
