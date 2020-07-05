@@ -3,7 +3,7 @@ import { FormControl } from '@angular/forms';
 import { Conta } from '../model/conta';
 import { CONTAMOCK } from '../mock/mock-profissionais';
 import { Router, ActivatedRoute } from '@angular/router';
-import { MainLogoComponent } from '../main-logo/main-logo.component'
+import { MainLogoComponent } from '../main-logo/main-logo.component';
 
 @Component({
   selector: 'app-login',
