@@ -1,5 +1,5 @@
 export interface Conta {
-    id: string,
+    id: number,
     email: string,
     senha: string,
     nome_completo: string,

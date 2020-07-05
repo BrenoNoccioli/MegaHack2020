@@ -1,0 +1,38 @@
+<div class="container-fluid" style="height: 700px;margin-top:20px">
+  <div class="row  h-100">
+    <div class="col-7">
+
+<!-- AREA ESQUERDA -->
+<div class="row">
+  <!-- top menu -->
+  <div class="col-12" style="margin-left: 0; margin-right: 0;">
+  <app-top-menu></app-top-menu>
+  </div>
+</div>
+ <!-- Area de apresentacao -->
+
+    </div>
+    <div class="col" id="login-area">
+<!-- AREA DIREITA -->
+  <!-- Area de Login -->
+    
+    <div id="form-area">
+    <form>
+      <div class="form-group">
+        <label>
+            email
+        </label>
+        <input type="email" [formControl]="email" class="form-control">
+        <label>
+            senha
+        </label>
+        <input type="text" [formControl]="senha" class="form-control">
+        <p>
+          <button (click)="login()" class="btn btn-primary">Entrar</button>
+        </p>
+      </div>
+    </form>
+    </div>
+  
+</div>
+</div>
