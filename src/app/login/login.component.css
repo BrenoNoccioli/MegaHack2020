@@ -1,10 +1,8 @@
-*{
-    border: solid black 2px;
-}
 
-form{
-    margin-top: auto;
+#form-area{
+    margin-top:200px;
     margin-bottom: auto;
+    /* background-color: black; */
 }
 .form-control{
     margin-bottom: 10px;
@@ -12,4 +10,8 @@ form{
 
   .container-fluid{
       height: 100%;
+  }
+
+  #login-area{
+      background-color: lightgrey;
   }
