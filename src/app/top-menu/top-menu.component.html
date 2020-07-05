@@ -5,15 +5,14 @@
     </button> <a class="navbar-brand" href="#">Logo</a>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="navbar-nav">
-        <ng-template [ngIf]="logado==true">
+        <!-- <ng-template [ngIf]="logado==true"> -->
         <li class="nav-item">
            <a class="nav-link" routerLink="/principal">Principal</a>
         </li>
-        </ng-template>
+        <!-- </ng-template> -->
         <li class="nav-item">
-           <a class="nav-link" routerLink="/cadastro">Cadastro</a>
+           <a class="nav-link"  routerLink="/cadastro">Cadastro</a>
         </li>
-        
         <ng-template [ngIf]="logado==true">
         <li class="nav-item">
             <a class="nav-link" href="#">Lista de Profissionais</a>
@@ -28,7 +27,7 @@
         <ng-template [ngIf]="logado==true">
             <li class='ola'>Olá, Usuário.</li>
             <li class="nav-item active">
-              <a class="nav-link" routerLink="/login">Logout  </a>
+              <a class="nav-link" routerLink="/login">Sair</a>
           </li>
         </ng-template>
         </ul>

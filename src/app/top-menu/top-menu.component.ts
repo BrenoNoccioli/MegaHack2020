@@ -12,7 +12,7 @@ export class TopMenuComponent implements OnInit {
   ngOnInit(): void {
     this.logado = false;
   }
-
+  
   setLogado( stt : boolean){
     this.logado= stt;
   }
