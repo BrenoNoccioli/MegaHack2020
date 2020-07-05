@@ -1,0 +1,12 @@
+h2 {
+  margin-top: 1em;
+  margin-bottom: 2em;
+  font-weight: bolder;
+  font-size: medium;
+}
+
+div {
+  flex: auto;
+  display: contents;
+  align-items: center;
+}
