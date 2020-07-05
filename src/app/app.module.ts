@@ -1,13 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-
 import { AppComponent } from './app.component';
 import { PrincipalComponent } from './principal/principal.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { PublicacaoComponent } from './publicacao/publicacao.component';
+import { ProfissionaisComponent } from './profissionais/profissionais.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +15,8 @@ import { PublicacaoComponent } from './publicacao/publicacao.component';
     PrincipalComponent,
     CadastroComponent,
     LoginComponent,
-    PublicacaoComponent
+    PublicacaoComponent,
+    ProfissionaisComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,6 +29,6 @@ import { PublicacaoComponent } from './publicacao/publicacao.component';
     ]),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
