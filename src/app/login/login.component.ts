@@ -25,8 +25,6 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-    
-    console.log(this.contas);
     let valido = false;
     this.contas.forEach(conta => {
       if(conta.email == this.email.value
