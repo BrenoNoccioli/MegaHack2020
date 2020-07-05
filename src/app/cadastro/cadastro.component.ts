@@ -1,8 +1,9 @@
 import { CadastroService } from "./../service/cadastro.service"
 import { Component, OnInit } from '@angular/core';
 import { Conta } from '../model/conta';
-import { FormGroup, FormBuilder, Validators } from "@angular/forms";
+import { FormGroup, FormBuilder, Validators, FormControl } from "@angular/forms";
 import { ActivatedRoute, Router } from "@angular/router";
+import { empty } from 'rxjs';
 
 
 
@@ -32,9 +33,9 @@ export class CadastroComponent implements OnInit {
 
   ngOnInit(): void {
     this.criarFormularioDeCadastro();
-   
+    
     let id: number = this.route.snapshot.params["id"];
-
+  
     if (id === undefined) {
       this.novo = true;
     } else {
@@ -45,6 +46,7 @@ export class CadastroComponent implements OnInit {
 
   findById(id: number) {
     this.cadastroService.getById(id).subscribe((conta: Conta) => {
+      console.log('conta obtida '+conta.email +" nome "+conta.nome_completo);
       this.conta = conta;
     });
   }
