@@ -8,7 +8,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { PublicacaoComponent } from './publicacao/publicacao.component';
 import { ProfissionaisComponent } from './profissionais/profissionais.component';
-import { MainLogoComponent } from './main-logo/main-logo.component';
+import { TopMenuComponent } from './top-menu/top-menu.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +18,7 @@ import { MainLogoComponent } from './main-logo/main-logo.component';
     LoginComponent,
     PublicacaoComponent,
     ProfissionaisComponent,
-    MainLogoComponent,
+    TopMenuComponent,
   ],
   imports: [
     BrowserModule,
