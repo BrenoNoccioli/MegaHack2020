@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule }    from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { PrincipalComponent } from './principal/principal.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
@@ -24,12 +25,15 @@ import { TopMenuComponent } from './top-menu/top-menu.component';
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
     RouterModule.forRoot([
     {path: 'login', component: LoginComponent},
     {path: 'principal', component: PrincipalComponent},
     {path: 'cadastro', component: CadastroComponent},
+    {path: 'cadastro/:id', component: CadastroComponent},
     {path: 'publicacao', component: PublicacaoComponent},
-    { path: '',   redirectTo: '/login', pathMatch: 'full'}
+    { path: '',   redirectTo: '/login', pathMatch: 'full'},
+    { path:'**'   , component: LoginComponent  }
     ]),
   ],
   providers: [],
