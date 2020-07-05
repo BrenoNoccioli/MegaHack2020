@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { CadastroService } from "./../service/cadastro.service"
 import { Conta } from '../model/conta';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-profissionais',
@@ -7,7 +9,8 @@ import { Conta } from '../model/conta';
   styleUrls: ['./profissionais.component.css'],
 })
 export class ProfissionaisComponent implements OnInit {
-  profissionais: Array<any>;
+  contas: Conta[];
+  especialidade = new FormControl();
 
   constructor(private cadastroService: CadastroService) {}
 
@@ -18,6 +21,6 @@ export class ProfissionaisComponent implements OnInit {
   getAll() {
     this.cadastroService
       .getAll()
-      .subscribe((dados) => (this.profissionais = dados));
+      .subscribe((dados) => (this.contas = dados));
   }
 }

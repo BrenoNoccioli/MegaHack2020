@@ -4,13 +4,13 @@
   <label>
     Especialidade
   </label>
-  <input type="especialidade" [formcontrol]="especialidade" class="form-control">
+  <input type="text" [formControl]="especialidade"  class="form-control">
 
 </div>
 
 <ul>
 
-  <li *ngfor="let c of profissionais">
+  <li *ngFor="let c of contas">
     {{c.nome_completo}}
     -
     {{c.pontuacao}}

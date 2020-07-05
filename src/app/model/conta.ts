@@ -11,5 +11,6 @@ export class Conta {
     estado: string;
     cep: string;
     latitude: string;
-    longitude: string
+    longitude: string;
+    pontuacao: number;
   }
