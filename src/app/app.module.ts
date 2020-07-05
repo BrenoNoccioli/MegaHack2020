@@ -5,7 +5,7 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { PrincipalComponent } from './principal/principal.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { PublicacaoComponent } from './publicacao/publicacao.component';
 
@@ -20,9 +20,11 @@ import { PublicacaoComponent } from './publicacao/publicacao.component';
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot([
     {path: 'login', component: LoginComponent},
     {path: 'principal', component: PrincipalComponent},
+    {path: 'cadastro', component: CadastroComponent},
     ]),
   ],
   providers: [],
