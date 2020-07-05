@@ -13,6 +13,10 @@ import { empty } from 'rxjs';
   styleUrls: ['./cadastro.component.css']
 })
 export class CadastroComponent implements OnInit {
+  nome_completo_input = new FormControl();
+  email_input = new FormControl();
+  senha_input = new FormControl();
+  confirma_senha_input = new FormControl();
 
   senhaForte: boolean;
   confirmacaoSenha: string = ''
@@ -24,7 +28,8 @@ export class CadastroComponent implements OnInit {
   formularioDeCadastro: FormGroup;
 
   constructor(
-    private fb: FormBuilder,
+   //private fb: FormBuilder,
+
     private route: ActivatedRoute,
     private router: Router,
     private cadastroService: CadastroService,
@@ -32,7 +37,6 @@ export class CadastroComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.criarFormularioDeCadastro();
     
     let id: number = this.route.snapshot.params["id"];
   
@@ -53,6 +57,7 @@ export class CadastroComponent implements OnInit {
 
   // Cadastro API
   cadastrar() {
+    
     if (this.novo) {
       this.cadastroService
         .insert(this.conta)
@@ -74,18 +79,6 @@ export class CadastroComponent implements OnInit {
 
   enviarDados() {
    console.log(this.formularioDeCadastro.value);
-  }
-
-  criarFormularioDeCadastro() {
-    this.formularioDeCadastro = this.fb.group({
-      nome_completo: ["", Validators.compose([Validators.required])],
-      email: ["", Validators.compose([Validators.email])],
-      senha: [
-        "",
-        Validators.compose([Validators.required, Validators.minLength(8)])
-      ],
-      confirmarSenha: ["", Validators.compose([Validators.required])]
-    });
   }
 
   //Classificação da força da senha

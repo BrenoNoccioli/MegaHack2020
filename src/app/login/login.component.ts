@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {
       if(conta.email == this.email.value
       && conta.senha == this.senha.value){
         valido = true;
-        this.router.navigate(['/principal']);
+        this.router.navigate([`/principal/${conta.id}`]);
       }
     });
     
