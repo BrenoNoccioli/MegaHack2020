@@ -37,6 +37,7 @@ export class CadastroComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    this.conta = new Conta();
     
     let id: number = this.route.snapshot.params["id"];
   
@@ -58,7 +59,9 @@ export class CadastroComponent implements OnInit {
   // Cadastro API
   cadastrar() {
     
+
     if (this.novo) {
+      this.preencheContaNova();
       this.cadastroService
         .insert(this.conta)
         .subscribe((conta: Conta) => {
@@ -66,7 +69,7 @@ export class CadastroComponent implements OnInit {
           this.novo = false;
         });
       alert("Cadastrado");
-      this.router.navigate(['/principal']);
+      this.router.navigate(['/login']);
     } else {
       this.cadastroService
         .update(this.conta)
@@ -86,18 +89,36 @@ export class CadastroComponent implements OnInit {
     // listagem dos caracteres considerados "especiais"
     const caracteresEspeciais: string[] = ["@", "#", "$", "%", "&"];
 
-    const contemCaracterEspecial: boolean = this.conta.senha
+    const contemCaracterEspecial: boolean = this.senha_input.value
       .split("") // transforma a senha em um array separado por ''
       .some((caracter: string): boolean => {
         return caracteresEspeciais.includes(caracter); // retorna verdadeiro se o caractere existir no array caracteresEspeciais
       });
 
-    const contemMaisDeDezCaracteres: boolean = this.conta.senha.length > 10;
+    const contemMaisDeDezCaracteres: boolean = this.senha_input.value.length > 10;
 
     this.senhaForte = contemCaracterEspecial && contemMaisDeDezCaracteres;
   }
 
   verificaSenhasConferem(): void {
-    this.senhasConferem = this.conta.senha === this.confirmacaoSenha;
+    this.senhasConferem = this.senha_input.value === this.senha_input.value;
   }
+
+  preencheContaNova(){
+    console.log(this.email_input.value + '   '+this.senha_input.value);
+    this.conta.email =  this.email_input.value;
+    this.conta.senha = this.senha_input.value;
+    this.conta.nome_completo =  this.nome_completo_input.value;
+    this.conta.foto = '';
+    this.conta.especialidade = [];
+    this.conta.classificacao = 1; //default = 1  (cliente)
+    this.conta.logradouro = '';
+    this.conta. cidade = '';
+    this.conta.estado = '';
+    this.conta.cep = '';
+    this.conta.latitude = '';
+    this.conta.longitude = '';
+  }
+
+
 }
