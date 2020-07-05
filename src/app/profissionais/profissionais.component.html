@@ -1,19 +1,17 @@
 <h2>Lista de Profissionais</h2>
 
-<div class="form-group">
+<div class="form-group" for="specs">
   <label>
     Especialidade
   </label>
-  <input type="text" [formControl]="especialidade"  class="form-control">
-
-</div>
-<select class="form-control" id="allocation-algorithm" [(ngModel)]="conta">
-  <option *ngFor="let c of contas" value="{{c.nome_completo}}" >{{c.nome_completo}}</option>
+<select class="form-control" id="allocation-algorithm" [(ngModel)]="espec_selecionada" (change)="show()" name="specs">
+  <option >Selecione uma especialidade</option>
+  <option *ngFor="let espec of list_especialidades" value="{{espec}}" >{{espec}}</option>
 </select>
 
-<ul>
+<ul class="list-group">
 
-  <li *ngFor="let c of contas">
+  <li *ngFor="let c of selecionados" class="list-group-item">
     {{c.nome_completo}}
     -
     {{c.pontuacao}}
@@ -22,3 +20,4 @@
 
   </li>
 </ul>
+</div>

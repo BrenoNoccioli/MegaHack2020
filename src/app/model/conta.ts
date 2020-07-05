@@ -4,7 +4,7 @@ export class Conta {
     senha: string;
     nome_completo: string;
     foto?: string;
-    especialidade?: [];
+    especialidade?: string[];
     classificacao?: number;
     logradouro?: string;
     cidade?: string;
