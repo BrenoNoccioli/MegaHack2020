@@ -8,18 +8,18 @@
       <ul class="navbar-nav">
         <!-- <ng-template [ngIf]="logado==true"> -->
         <li class="nav-item">
-           <a class="nav-link" routerLink="/principal">Principal</a>
+           <a class="nav-link" routerLink="{{this.principal}}">Principal</a>
         </li>
         <!-- </ng-template> -->
         <li class="nav-item">
-           <a class="nav-link"  routerLink="/cadastro">Cadastro</a>
+           <a class="nav-link"  routerLink="{{this.cadastro}}">Cadastro</a>
         </li>
-        <ng-template [ngIf]="logado==true">
+        <ng-template [ngIf]="id != ''">
         <li class="nav-item">
-            <a class="nav-link" href="#">Lista de Profissionais</a>
+            <a class="nav-link" routerLink="{{lista_prof}}">Lista de Profissionais</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="/publicacoes">Publicações</a>
+            <a class="nav-link" href="/publicacao">Publicações</a>
         </li>
         </ng-template>
       </ul>
