@@ -30,7 +30,7 @@
                         (keyup)="forcaDaSenha()" class="form-control form-control-sm" />
                     <label for="form9">Senha</label>
                 </div>
-                <div *ngIf="this.usuario.senha && this.usuario.senha.length >= 1">
+                <div *ngIf="this.conta.senha && this.conta.senha.length >= 1">
                     {{this.senhaForte ? 'Senha Forte': 'Senha fraca'}}
                 </div>
 
@@ -40,12 +40,12 @@
                         [ngModelOptions]="{standalone: true}" class="form-control form-control-sm" />
                     <label for="form10">Confirmar senha:</label>
                 </div>
-                <div *ngIf="this.confirmacaoSenha.length >= 1 && this.usuario.senha !== this.confirmacaoSenha">
+                <div *ngIf="this.confirmacaoSenha.length >= 1 && this.conta.senha !== this.confirmacaoSenha">
                     Senhas não conferem</div>
 
                 <div class="text-center mt-4">
                     <button data-dismiss="modal" class="btn btn btn-rounded" (click)="cadastrar()"
-                        [disabled]="!formularioDeUsuario.valid && !this.senhasConferem">
+                        [disabled]="!formularioDeCadastro.valid && !this.senhasConferem">
                         Enviar <i class="fa fa-paper-plane-o ml-1"></i>
                     </button>
                 </div>

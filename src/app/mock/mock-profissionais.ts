@@ -2,7 +2,7 @@ import {Conta } from '../model/conta'
 
 export const CONTAMOCK : Conta[] = [
     {
-      "id": "1",
+      "id": 1,
       "email": "email 1",
       "senha": "senha 1",
       "nome_completo": "nome_completo 1",
@@ -17,7 +17,7 @@ export const CONTAMOCK : Conta[] = [
       "longitude": "longitude 1"
     },
     {
-      "id": "2",
+      "id": 2,
       "email": "email 2",
       "senha": "senha 2",
       "nome_completo": "nome_completo 2",
@@ -32,7 +32,7 @@ export const CONTAMOCK : Conta[] = [
       "longitude": "longitude 2"
     },
     {
-      "id": "3",
+      "id": 3,
       "email": "email 3",
       "senha": "senha 3",
       "nome_completo": "nome_completo 3",
@@ -47,7 +47,7 @@ export const CONTAMOCK : Conta[] = [
       "longitude": "longitude 3"
     },
     {
-      "id": "4",
+      "id": 4,
       "email": "email 4",
       "senha": "senha 4",
       "nome_completo": "nome_completo 4",
@@ -62,7 +62,7 @@ export const CONTAMOCK : Conta[] = [
       "longitude": "longitude 4"
     },
     {
-      "id": "5",
+      "id": 5,
       "email": "email 5",
       "senha": "senha 5",
       "nome_completo": "nome_completo 5",
@@ -77,7 +77,7 @@ export const CONTAMOCK : Conta[] = [
       "longitude": "longitude 5"
     },
     {
-      "id": "6",
+      "id": 6,
       "email": "email 6",
       "senha": "senha 6",
       "nome_completo": "nome_completo 6",
@@ -92,7 +92,7 @@ export const CONTAMOCK : Conta[] = [
       "longitude": "longitude 6"
     },
     {
-      "id": "7",
+      "id": 7,
       "email": "email 7",
       "senha": "senha 7",
       "nome_completo": "nome_completo 7",
@@ -107,7 +107,7 @@ export const CONTAMOCK : Conta[] = [
       "longitude": "longitude 7"
     },
     {
-      "id": "8",
+      "id": 8,
       "email": "email 8",
       "senha": "senha 8",
       "nome_completo": "nome_completo 8",
@@ -122,7 +122,7 @@ export const CONTAMOCK : Conta[] = [
       "longitude": "longitude 8"
     },
     {
-      "id": "9",
+      "id": 9,
       "email": "email 9",
       "senha": "senha 9",
       "nome_completo": "nome_completo 9",
@@ -137,7 +137,7 @@ export const CONTAMOCK : Conta[] = [
       "longitude": "longitude 9"
     },
     {
-      "id": "10",
+      "id": 10,
       "email": "email 10",
       "senha": "senha 10",
       "nome_completo": "nome_completo 10",
@@ -152,7 +152,7 @@ export const CONTAMOCK : Conta[] = [
       "longitude": "longitude 10"
     },
     {
-      "id": "11",
+      "id": 11,
       "email": "email 11",
       "senha": "senha 11",
       "nome_completo": "nome_completo 11",
@@ -167,7 +167,7 @@ export const CONTAMOCK : Conta[] = [
       "longitude": "longitude 11"
     },
     {
-      "id": "12",
+      "id": 12,
       "email": "email 12",
       "senha": "senha 12",
       "nome_completo": "nome_completo 12",
@@ -182,7 +182,7 @@ export const CONTAMOCK : Conta[] = [
       "longitude": "longitude 12"
     },
     {
-      "id": "13",
+      "id": 13,
       "email": "email 13",
       "senha": "senha 13",
       "nome_completo": "nome_completo 13",
@@ -197,7 +197,7 @@ export const CONTAMOCK : Conta[] = [
       "longitude": "longitude 13"
     },
     {
-      "id": "14",
+      "id": 14,
       "email": "email 14",
       "senha": "senha 14",
       "nome_completo": "nome_completo 14",
@@ -212,7 +212,7 @@ export const CONTAMOCK : Conta[] = [
       "longitude": "longitude 14"
     },
     {
-      "id": "15",
+      "id": 15,
       "email": "email 15",
       "senha": "senha 15",
       "nome_completo": "nome_completo 15",
@@ -227,7 +227,7 @@ export const CONTAMOCK : Conta[] = [
       "longitude": "longitude 15"
     },
     {
-      "id": "16",
+      "id": 16,
       "email": "email 16",
       "senha": "senha 16",
       "nome_completo": "nome_completo 16",
@@ -242,7 +242,7 @@ export const CONTAMOCK : Conta[] = [
       "longitude": "longitude 16"
     },
     {
-      "id": "17",
+      "id": 17,
       "email": "email 17",
       "senha": "senha 17",
       "nome_completo": "nome_completo 17",
