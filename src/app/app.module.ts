@@ -32,6 +32,7 @@ import { TopMenuComponent } from './top-menu/top-menu.component';
     {path: 'cadastro', component: CadastroComponent},
     {path: 'cadastro/:id', component: CadastroComponent},
     {path: 'publicacao', component: PublicacaoComponent},
+    {path: 'profissionais', component: ProfissionaisComponent},
     { path: '',   redirectTo: '/login', pathMatch: 'full'},
     { path:'**'   , component: LoginComponent  }
     ]),

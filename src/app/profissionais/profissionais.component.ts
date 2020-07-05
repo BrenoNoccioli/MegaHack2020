@@ -10,6 +10,7 @@ import { FormControl } from '@angular/forms';
 })
 export class ProfissionaisComponent implements OnInit {
   contas: Conta[];
+  conta : Conta;
   especialidade = new FormControl();
 
   constructor(private cadastroService: CadastroService) {}

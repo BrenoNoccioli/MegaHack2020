@@ -7,6 +7,9 @@
   <input type="text" [formControl]="especialidade"  class="form-control">
 
 </div>
+<select class="form-control" id="allocation-algorithm" [(ngModel)]="conta">
+  <option *ngFor="let c of contas" value="{{c.nome_completo}}" >{{c.nome_completo}}</option>
+</select>
 
 <ul>
 
