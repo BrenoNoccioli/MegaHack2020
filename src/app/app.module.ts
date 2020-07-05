@@ -28,7 +28,7 @@ import { TopMenuComponent } from './top-menu/top-menu.component';
     HttpClientModule,
     RouterModule.forRoot([
     {path: 'login', component: LoginComponent},
-    {path: 'principal', component: PrincipalComponent},
+    {path: 'principal/:id', component: PrincipalComponent},
     {path: 'cadastro', component: CadastroComponent},
     {path: 'cadastro/:id', component: CadastroComponent},
     {path: 'publicacao', component: PublicacaoComponent},

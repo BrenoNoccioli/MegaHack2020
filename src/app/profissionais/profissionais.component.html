@@ -1,1 +1,21 @@
-<p>profissionais works!</p>
+<h2>Lista de Profissionais</h2>
+
+<div class="form-group">
+  <label>
+    Especialidade
+  </label>
+  <input type="especialidade" [formcontrol]="especialidade" class="form-control">
+
+</div>
+
+<ul>
+
+  <li *ngfor="let c of profissionais">
+    {{c.nome_completo}}
+    -
+    {{c.pontuacao}}
+    -
+    {{c.especialidade}}
+
+  </li>
+</ul>
