@@ -5,14 +5,16 @@ import { AppComponent } from './app.component';
 import { PrincipalComponent } from './principal/principal.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { FormsModule } from '@angular/forms';
-import { BlogComponent } from './blog/blog.component';
+import { LoginComponent } from './login/login.component';
+import { PublicacaoComponent } from './publicacao/publicacao.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PrincipalComponent,
     CadastroComponent,
-    BlogComponent
+    LoginComponent,
+    PublicacaoComponent
   ],
   imports: [
     BrowserModule,
