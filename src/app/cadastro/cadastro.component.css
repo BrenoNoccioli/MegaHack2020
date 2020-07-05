@@ -5,14 +5,14 @@
   }
   
   .form-title {/*Título 'Cadastre-se'*/
-    color: #4097aa;
+    color: #007aff;
     font-weight: bold;
     font-size: 2.5em;
     text-align: center;
   }
   
   .fa { /*Ícones*/
-    color: #4097aa;
+    color: #007aff;
   }
   
   .login-logo { /*Div com título 'Cadastre-se'*/
@@ -20,7 +20,7 @@
   }
   
   .btn { /*Botão*/
-    background-color: #4097aa;
-    color: #ffff;
+    background-color: #007aff;
+    color: gray;
   }
   
