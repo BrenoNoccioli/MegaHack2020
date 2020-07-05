@@ -8,6 +8,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { PublicacaoComponent } from './publicacao/publicacao.component';
 import { ProfissionaisComponent } from './profissionais/profissionais.component';
+import { MainLogoComponent } from './main-logo/main-logo.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { ProfissionaisComponent } from './profissionais/profissionais.component'
     LoginComponent,
     PublicacaoComponent,
     ProfissionaisComponent,
+    MainLogoComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,6 +29,7 @@ import { ProfissionaisComponent } from './profissionais/profissionais.component'
     {path: 'principal', component: PrincipalComponent},
     {path: 'cadastro', component: CadastroComponent},
     {path: 'publicacao', component: PublicacaoComponent},
+    { path: '',   redirectTo: '/login', pathMatch: 'full'}
     ]),
   ],
   providers: [],

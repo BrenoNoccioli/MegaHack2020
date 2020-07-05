@@ -1,0 +1,15 @@
+*{
+    border: solid black 2px;
+}
+
+form{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.form-control{
+    margin-bottom: 10px;
+  }
+
+  .container-fluid{
+      height: 100%;
+  }

@@ -3,6 +3,7 @@ import { FormControl } from '@angular/forms';
 import { Conta } from '../model/conta';
 import { CONTAMOCK } from '../mock/mock-profissionais';
 import { Router, ActivatedRoute } from '@angular/router';
+import { MainLogoComponent } from '../main-logo/main-logo.component'
 
 @Component({
   selector: 'app-login',
@@ -26,10 +27,10 @@ export class LoginComponent implements OnInit {
       && conta.senha == this.senha.value){
         console.log('ACHEI A CONTA ! ! !')
         this.router.navigate(['/principal']);
-      }else{
-        console.log('NÃO ACHEI ! !')
       }
     });
+  
+    alert("Login ou senha invalida!")
   }
 
 }

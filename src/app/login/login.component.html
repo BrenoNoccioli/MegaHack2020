@@ -1,11 +1,43 @@
-<label>
-    email:
-    <input type="text" [formControl]="email">
-</label>
-<label>
-    senha:
-    <input type="text" [formControl]="senha">
-</label>
-<p>
-  <button (click)="login()">Entrar</button>
-</p>
+<div class="container-fluid h-100 d-inline-block">
+  <div class="row">
+    <div class="col-7">
+
+<!-- AREA ESQUERDA -->
+<div class="row">
+  <!-- logo -->
+  <div class="col-2">
+    <app-main-logo></app-main-logo>
+  </div>
+  <!-- top menu -->
+  <div class="col-10">
+    
+  item x item x item x item x item x item x 
+  </div>
+</div>
+ <!-- Area de apresentacao -->
+
+    </div>
+    <div class="col">
+<!-- AREA DIREITA -->
+  <!-- Area de Login -->
+    
+    
+    <form>
+      <div class="form-group">
+        <label>
+            email
+        </label>
+        <input type="email" [formControl]="email" class="form-control">
+        <label>
+            senha
+        </label>
+        <input type="text" [formControl]="senha" class="form-control">
+        <p>
+          <button (click)="login()" class="btn btn-primary">Entrar</button>
+        </p>
+      </div>
+    </form>
+
+  
+</div>
+</div>
