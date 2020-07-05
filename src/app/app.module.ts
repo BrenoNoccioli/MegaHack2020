@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { PrincipalComponent } from './principal/principal.component';
@@ -18,7 +19,11 @@ import { PublicacaoComponent } from './publicacao/publicacao.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot([
+    {path: 'login', component: LoginComponent},
+    {path: 'principal', component: PrincipalComponent},
+    ]),
   ],
   providers: [],
   bootstrap: [AppComponent]
