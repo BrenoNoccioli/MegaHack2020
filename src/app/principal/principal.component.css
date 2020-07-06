@@ -19,16 +19,17 @@ border-bottom: 0px;
 .card-body{
     border-style: solid;
     border-width: 2px;
-    border-color: #006a74;
+    border-color: #d4ecee;
     
 }
 
-div {
+#calendar {
     justify-content: left;
     width: 25em;
+    background: darkblue;
   }
   
-  ul {
+  #calendar  ul {
     list-style-type: none;
   }
   body {
