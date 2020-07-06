@@ -9,7 +9,7 @@
 					<p class="card-text">
 						Acesse seu perfil:
 					</p>
-					<button type="button" class="btn btn-primary" (click)="onNavigate(1)">
+					<button type="button" class="btn btn-primary" routerLink="{{this.principal}}">
 						Acessar
 					</button>
 				</div>
@@ -26,7 +26,7 @@
 						Consulte seus agendamentos.
 					</p>
 					
-					<button type="button" class="btn btn-primary" (click)="onNavigate(2)">
+					<button type="button" class="btn btn-primary"  routerLink="{{this.login}}">
 						Acessar
 					</button>
 				</div>
@@ -43,7 +43,7 @@
 					<p class="card-text">
 						Atualize-se sobre os protocolos de prevenção ao COVID-19 e muito mais!
 					</p>
-					<button type="button" class="btn btn-primary" (click)="onNavigate(3)">
+					<button type="button" class="btn btn-primary" routerLink="{{this.publicacao}}">
 						Acessar
 					</button>
 				</div>
@@ -57,7 +57,7 @@
 					<p class="card-text">
 						Encontre um profissional com a especialidade que você precisa.
 					</p>
-					<button type="button" class="btn btn-primary" (click)="onNavigate(4)">
+					<button type="button" class="btn btn-primary" routerLink="{{this.lista_prof}}">
 						Acessar
 					</button>
 				</div>

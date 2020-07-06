@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from "@angular/router";
+import { Location } from "@angular/common";
+import { ActivatedRoute,Router } from "@angular/router";
 
 @Component({
   selector: 'app-top-menu',
@@ -11,24 +12,26 @@ export class TopMenuComponent implements OnInit {
   principal: string;
   cadastro: string;
   lista_prof:string;
-  publicacoes: string;
+  publicacao: string;
   sair : string;
 
   id : string;
  logado : boolean;
-  constructor( private route: ActivatedRoute ) { }
+
+  constructor( private route: ActivatedRoute, private router : Router, private location: Location ) { }
 
   ngOnInit(): void {
     this.principal = `/principal/${this.id}`;
-    this.cadastro = `/cadastro`;
+    this.cadastro = `/cadastro/${this.id}`;
     this.lista_prof = `/profissionais/${this.id}`;
-    this.publicacoes = `/publicacoes`;
-    
-  this.id = this.route.snapshot.params["id"];
+    this.publicacao = `/publicacao/${this.id}`;
+
+    let parts = location.pathname.split('/');
+    console.log(parts);
+    if(parts.length>1){
+      this.id = parts[2];
+    }
+    console.log("id recebido "+this.id);
     this.logado = false;
-  }
-  
-  setLogado( stt : boolean){
-    this.logado= stt;
   }
 }

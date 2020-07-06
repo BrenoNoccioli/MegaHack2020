@@ -8,39 +8,26 @@ import { ActivatedRoute } from "@angular/router";
 })
 export class PrincipalComponent implements OnInit {
 
+  principal: string;
+  cadastro: string;
+  lista_prof:string;
+  publicacao: string;
+  login :string;
+  protocolos : string;
+
   id : string;
   constructor( private route: ActivatedRoute ) { }
 
   ngOnInit(): void {
     
+  this.principal = `/principal/${this.id}`;
+  this.cadastro = `/cadastro/${this.id}`;
+  this.lista_prof = `/profissionais/${this.id}`;
+  this.publicacao = `/publicacao`;
+
   this.id = this.route.snapshot.params["id"];
 
   }
-  
-  onNavigate(value)
-{
-    if (value == 1) then{
-        
-    const url = './';
-    window.open(url, '_blank');
-    }
-  else if {
-      
-    const url = './';
-    window.open(url, '_blank');
-  }
-  else if {
-      
-    const url = './profissionais';
-    window.open(url, '_blank');
-  }
-  else {
-      
-    const url = 'publicacoes';
-    window.open(url, '_blank');
-  }
-
-}
   
 
 }

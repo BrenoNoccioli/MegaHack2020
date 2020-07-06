@@ -14,18 +14,18 @@
         <li class="nav-item">
            <a class="nav-link"  routerLink="{{this.cadastro}}">Cadastro</a>
         </li>
-        <ng-template [ngIf]="id != ''">
+        <ng-template [ngIf]="this.id != '' && this.id != undefined"  >
         <li class="nav-item">
-            <a class="nav-link" routerLink="{{lista_prof}}">Lista de Profissionais</a>
+            <a class="nav-link" routerLink="{{this.lista_prof}}">Lista de Profissionais</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="/publicacao">Publicações</a>
+            <a class="nav-link" href="{{this.publicacao}}">Publicações</a>
         </li>
         </ng-template>
       </ul>
       
       <ul class="navbar-nav ml-md-auto">
-        <ng-template [ngIf]="logado==true">
+        <ng-template [ngIf]="this.id != '' && this.id != undefined ">
             <li class='ola'>Olá, Usuário.</li>
             <li class="nav-item active">
               <a class="nav-link" routerLink="/login">Sair</a>
