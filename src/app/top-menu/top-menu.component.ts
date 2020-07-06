@@ -15,8 +15,8 @@ export class TopMenuComponent implements OnInit {
   publicacao: string;
   sair : string;
 
+  inicio : boolean;
   id : string;
- logado : boolean;
 
   constructor( private route: ActivatedRoute, private router : Router, private location: Location ) { }
 
@@ -26,12 +26,9 @@ export class TopMenuComponent implements OnInit {
     this.lista_prof = `/profissionais/${this.id}`;
     this.publicacao = `/publicacao/${this.id}`;
 
-    let parts = location.pathname.split('/');
-    console.log(parts);
-    if(parts.length>1){
-      this.id = parts[2];
-    }
-    console.log("id recebido "+this.id);
-    this.logado = false;
+    this.route.queryParams.subscribe(param=> this.id = param['id']);
+    console.log(this.id);
+    console.log(this.location.isCurrentPathEqualTo);
+
   }
 }
