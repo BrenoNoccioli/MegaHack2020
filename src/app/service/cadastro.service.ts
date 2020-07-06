@@ -15,15 +15,17 @@ export class CadastroService {
     return this.http.get <any[]>("https://5efd48e5dd373900160b2e80.mockapi.io/generic/contas");
   }
 
-  getById(id: number) {
+  getById(id: string) {
     return this.http.get(`https://5efd48e5dd373900160b2e80.mockapi.io/generic/contas/${id}`);
   }
 
   insert(conta: Conta)  {
+    console.log('salvando \n'+conta);
     return this.http.post(`https://5efd48e5dd373900160b2e80.mockapi.io/generic/contas`, conta);
   }
 
   update(conta: Conta) {
+    console.log('atualizando \n'+conta);
     return this.http.put(`https://5efd48e5dd373900160b2e80.mockapi.io/generic/contas`, conta);
   }
 

@@ -23,33 +23,33 @@ export class CadastroComponent implements OnInit {
   senhasConferem: boolean = false
   novo: boolean = false;
   conta: Conta;
- 
+
 
   formularioDeCadastro: FormGroup;
+  id : string;
 
   constructor(
-   //private fb: FormBuilder,
 
     private route: ActivatedRoute,
     private router: Router,
     private cadastroService: CadastroService,
-  
-  ) {}
 
-  ngOnInit(): void {
-    this.conta = new Conta();
+    ) {}
     
-    let id: number = this.route.snapshot.params["id"];
-  
-    if (id === undefined) {
+    ngOnInit(): void {
+      this.conta = new Conta();
+      
+    this.route.queryParams.subscribe(param=>this.id = param["id"]);
+
+    if (this.id === undefined) {
       this.novo = true;
     } else {
-      this.findById(id);
+      this.findById(this.id);
       this.novo = false;
     }
   }
 
-  findById(id: number) {
+  findById(id:string) {
     this.cadastroService.getById(id).subscribe((conta: Conta) => {
       console.log('conta obtida '+conta.email +" nome "+conta.nome_completo);
       this.conta = conta;
@@ -58,7 +58,7 @@ export class CadastroComponent implements OnInit {
 
   // Cadastro API
   cadastrar() {
-    
+
 
     if (this.novo) {
       this.preencheContaNova();
