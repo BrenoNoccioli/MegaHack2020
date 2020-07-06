@@ -1,0 +1,15 @@
+#form-area{
+    margin-top:200px;
+    margin-bottom: auto;
+}
+.form-control{
+    margin-bottom: 10px;
+  }
+
+  .container-fluid{
+      height: 100%;
+  }
+
+  #login-area{
+      background-color: lightgrey;
+  }

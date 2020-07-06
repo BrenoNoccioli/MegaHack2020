@@ -1,0 +1,22 @@
+
+.navbar-brand{
+    color: white;
+    border: solid 0.05em;
+    border-radius: 5px;
+    padding:0.5em;
+    background-color: #008eff;
+ }
+ 
+ .nav-item{
+    margin-left: 25px;
+    margin-right: 25px;
+ }
+ 
+ .nav-link{
+    color: white;
+ }
+ 
+ .ola{
+    color: white;
+    margin-top: 0.5em;
+ }

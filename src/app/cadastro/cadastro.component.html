@@ -1,0 +1,52 @@
+<div  id="modalLRForm2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+            <div class="login-logo">
+
+                <br><br>
+                <label>
+                    <h1 class="form-title">Cadastre-se</h1>
+                </label>
+
+            </div>
+
+            <form class="col-xl-10 py-6 center-block">
+                <div class="md-form form-sm">
+                    <i class="fa fa-user prefix"></i>
+                    <label for="form6">Nome</label>
+                    <input type="text" id="form6" class="form-control form-control-sm" [formControl]="nome_completo_input" />
+                </div>
+                <div class="md-form form-sm">
+                    <i class="fa fa-envelope prefix"></i>
+                    <label for="form7">E-mail</label>
+                    <input type="text" id="form7" class="form-control form-control-sm" [formControl]="email_input" />
+                </div>
+                <div class="md-form form-sm">
+                    <label for="form9">Senha</label>
+                    <i class="fa fa-unlock-alt prefix "></i>
+                    <input type="password" id="form9" [formControl]="senha_input" 
+                    (keyup)="forcaDaSenha()" class="form-control form-control-sm" />
+                </div>
+                <div *ngIf="senha_input.value && senha_input.value.length >= 1">
+                    {{this.senhaForte ? 'Senha Forte': 'Senha fraca'}}
+                </div>
+
+                <div class="md-form form-sm">
+                    <label for="form10">Confirmar senha:</label>
+                    <i class="fa fa-unlock-alt prefix"></i>
+                    <input type="password" id="form10" (keyup)="verificaSenhasConferem()" [formControl]="confirma_senha_input"
+                    class="form-control form-control-sm" />
+                </div>
+                <div *ngIf="this.confirmacaoSenha.length >= 1 && this.conta.senha !== this.confirmacaoSenha">
+                    Senhas não conferem</div>
+
+                <div class="text-center mt-4">
+                    <button data-dismiss="modal" class="btn btn btn-rounded" (click)="cadastrar()">
+                        Enviar <i class="fa fa-paper-plane-o ml-1"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

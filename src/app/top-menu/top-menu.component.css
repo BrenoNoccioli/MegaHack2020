@@ -1,0 +1,8 @@
+a{
+    color: rgb(75, 75, 75);
+}
+
+a:hover{
+    color:#01019c;
+    font-weight: bold;
+}
